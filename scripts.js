@@ -42,8 +42,6 @@ $(document).ready(function() {
     let input1 = $('#input-1').val()
     input1 = input1.replace(/\'/g,'"')  //JSON.parse does not like single quotes for arrays
     input1 = JSON.parse(input1)
-    event.preventDefault()
-    $('#output-1').text(JSON.stringify(input1))
-
+    $('#output-1').text(JSON.stringify(makeDec(input1)))
   })
 });
